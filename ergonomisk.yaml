@@ -1,0 +1,113 @@
+points:
+  zones:
+    matrix:
+      rows:
+        bottom:
+        home:
+        top:
+      columns:
+        pinky:
+          key:
+            splay: 10
+        ring:
+          key:
+            splay: -5
+            stagger: 10
+        middle:
+          key:
+            splay: -5
+            stagger: 5
+        index:
+          key:
+            splay: -4
+            stagger: -5
+        far:
+          key:
+            splay: -1
+            stagger: -5
+    thumb:
+      anchor:
+        ref: matrix_far_bottom
+        shift: [0, -1.5U]
+        rotate: -15
+      columns:
+        inner:
+        outer:
+          key: 
+            spread: 1.1U
+    
+outlines:
+  _switches:
+    - what: rectangle
+      where: true
+      asym: source
+      bound: false
+      size: 14
+  _polygon:
+    - what: rectangle
+      where: true
+      size: [cx + 15, cy + 15]
+      bevel: 6
+  plate: [_polygon, -_switches]
+
+pcbs:
+  ergonomisk:
+    outlines:
+      main:
+        outline: _polygon
+      switch_plate:
+        outline: plate
+        layer: Eco1.User
+    footprints:
+      keys:
+        what: choc
+        where: true
+        params:
+          from: GND
+          to: "{{column_net}}"
+          keycaps: true
+          reverse: true
+          hotswap: false
+      # Swapped for RPi Pico
+      promicro:
+        what: promicro
+        where:
+          ref: matrix_far_top
+          shift: [1u, -0.5u]
+          rotate: -90
+        params:
+          orientation: down
+      trrs:
+        what: trrs
+        where:
+          ref: matrix_far_top
+          shift: [2u, 0.5u]
+          rotate: 0
+        params:
+          A: GND
+          B: GND
+          C: P1
+          D: VCC
+          reverse: true
+          symmetric: true
+      reset:
+        what: button
+        where:
+          ref:
+            - matrix_ring_home
+          shift: [-0.7u, 0]
+          rotate: 90
+        params:
+          from: RST
+          to: GND
+      resetbottom:
+        what: button
+        where:
+          ref:
+            - matrix_ring_home
+          shift: [-0.7u, 0]
+          rotate: 90
+        params:
+          from: RST
+          to: GND
+          side: B

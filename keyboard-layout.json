@@ -1,0 +1,268 @@
+[
+  [
+    {
+      "y": 1,
+      "x": 3.5,
+      "c": "#474747",
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc100\n#00fffc"
+    },
+    "E\nÆ\n\n#\n\n\n€\n3",
+    {
+      "x": 10.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc500\n#00fffc"
+    },
+    "I\n\n\n*\n\n\n↑\n8"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 2.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n\n#00fffc"
+    },
+    "W\n\n\n@\n\n\n\n2",
+    {
+      "x": 1
+    },
+    "R\n\n\n$\n\n\n\n4",
+    {
+      "x": 8.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc400\n#00fffc"
+    },
+    "U\n⌫\n\n&\n\n\n↓\n7",
+    {
+      "x": 1,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc300\n#00fffc"
+    },
+    "O\nØ\n\n\\\n\n\nΩ\n9"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 5.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc100\n#00fffc"
+    },
+    "T\nθ\n\n%\n\n\nτ\n5",
+    {
+      "x": 6.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n\n#00fffc"
+    },
+    "Y\n⇞\n\n^\n\n\n\n6"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 1.5
+    },
+    "Q\n\n\n!\n\n\n\n1",
+    {
+      "x": 14.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc400\n#00fffc"
+    },
+    "P\n⌦\n\n|\n\n\nπ\n0"
+  ],
+  [
+    {
+      "y": -0.375,
+      "x": 3.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc100\n#00fffc\n\n#ff0000",
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "D\n⏯\n\n(\n\n\nΔ\nF3\n\n⇧",
+    {
+      "x": 10.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc800\n#00fffc\n\n#ff0000"
+    },
+    "K\n↑\n\n)\n\n\n⬆\nF8\n\n⇧"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 2.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n\n#00fffc\n\n#ff0000"
+    },
+    "S\n⏮\n\n{\n\n\n\nF2\n\n⎇",
+    {
+      "x": 1,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc100\n#00fffc\n\n#ff0000"
+    },
+    "F\n⏭\n\n[\n\n\nϕ\nF4\n\n⎈",
+    {
+      "x": 8.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc400\n#00fffc\n\n#ff0000"
+    },
+    "J\n↓\n\n]\n\n\n⬇\nF7\n\n⎈",
+    {
+      "x": 1,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc700\n#00fffc\n\n#ff0000"
+    },
+    "L\n→\n\n}\n\n\n⮕\nF9\n\n⎇"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 5.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc100\n#00fffc\n\n#ff0000"
+    },
+    "G\n◼\n\n<\n\n\n£\nF5",
+    {
+      "x": 6.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc400\n#00fffc\n\n#ff0000"
+    },
+    "H\n←\n\n>\n\n\n⬅\nF6"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 1.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc100\n#00fffc\n\n#ff0000",
+      "fa": [
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "A\nÅ\n\n⎋\n\n\nα\nF1\n\n◆",
+    {
+      "x": 14.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc400\n#00fffc\n\n#ff0000"
+    },
+    ";\n\n\n\n\n\n⛛\nF10\n\n◆"
+  ],
+  [
+    {
+      "y": -0.375,
+      "x": 3.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n\n#00fffc",
+      "f": 3
+    },
+    "C\n🕨\n\n+",
+    {
+      "x": 10.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffce00\n#00fffc",
+      "f": 3
+    },
+    ",\n\n\n-\n\n\n⇧"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 2.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n\n#00fffc",
+      "f": 3
+    },
+    "X\n🕩\n\n`",
+    {
+      "x": 1,
+      "f": 3
+    },
+    "V\n🕪\n\n'",
+    {
+      "x": 8.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffcb00\n#00fffc",
+      "f": 3
+    },
+    "M\nµ\n\n\"\n\n\n⇩",
+    {
+      "x": 1,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffcd00\n#00fffc",
+      "f": 3
+    },
+    ".\n\n\n_\n\n\n⇨"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 5.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc100\n#00fffc",
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "B\n\n\n=\n\n\nß\nF11",
+    {
+      "x": 6.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffca00\n#00fffc"
+    },
+    "N\n⇟\n\n\n\n\n⇦\nF12"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 1.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n\n#00fffc"
+    },
+    "Z\n⇱\n\n~",
+    {
+      "x": 14.5,
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#ffc100\n#00fffc"
+    },
+    "?\n⇲\n\n\n\n\nλ"
+  ],
+  [
+    {
+      "r": 30,
+      "rx": 6.5,
+      "ry": 4.25,
+      "t": "#efefef\n#ffc400\n\n#00ff022\n\n\n#ffc400",
+      "fa": [
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "h": 2
+    },
+    "⇥\nSPEC\n\n\n\n\nMOUSE",
+    {
+      "t": "#efefef\n#d800ff\n\n#00ff022\n\n\n#d800ff",
+      "fa": [
+        9
+      ],
+      "h": 2
+    },
+    "⌫\nSPEC\n\n\n\n\nNAV"
+  ],
+  [
+    {
+      "r": -30,
+      "rx": 13,
+      "x": -2,
+      "t": "#efefef\n#ffc400\n\n#00ff022\n\n\n#00ff022",
+      "h": 2
+    },
+    "␣\n◀\n\n\n\n\nSYM",
+    {
+      "t": "#efefef\n#ffc400\n\n#00ff022\n\n\n#00fffc",
+      "h": 2
+    },
+    "⏎\n▶\n\n\n\n\nNUM"
+  ]
+]
