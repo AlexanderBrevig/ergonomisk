@@ -40,7 +40,7 @@
   (pad "1" thru_hole circle (at 5 -3.8 350) (size 2.032 2.032) (drill 1.27) (layers "*.Cu" "*.Mask") (tstamp 46126558-0476-4ce5-9c8c-62745d8ed828))
   (pad "2" thru_hole circle (at 0 -5.9 350) (size 2.032 2.032) (drill 1.27) (layers "*.Cu" "*.Mask") (tstamp 2c150368-a919-438c-b012-36d7b3b3781e))
   (pad "2" thru_hole circle (at 0 -5.9 350) (size 2.032 2.032) (drill 1.27) (layers "*.Cu" "*.Mask") (tstamp b75bd9bf-254d-4cff-a12b-a89d455608e8))
-  (model "${KIPRJMOD}/ergonomisk.3d/Kailh LP Choc Burnt Orange.IGS"
+  (model "${KIPRJMOD}/ergonomisk.3d/Kailh_LP_Choc_Burnt_Orange.IGS"
     (offset (xyz 0 0 2.5))
     (scale (xyz 1 1 1))
     (rotate (xyz -90 0 -90))
