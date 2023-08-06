@@ -8,6 +8,7 @@
 
 ## Install
 
+* `git clone --recurse-submodules git@github.com:alexanderbrevig/ergonomisk`
 * KiCAD 7
 * `npm i -g ergogen`
 * `make`
