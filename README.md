@@ -16,6 +16,13 @@ This will generate a stub PCB that I modified to get to the final design.
 
 ## TODO
 
-- [ ] tenting puck
-- [ ] indicator LEDs
+### Library 
 
+- [x] tenting puck
+- [ ] per key SK6812MINI-E
+
+## REFs
+
+https://splitkb.com/
+https://fkcaps.com/?a=FlatFootFox
+https://flatfootfox.com/ergogen-introduction/

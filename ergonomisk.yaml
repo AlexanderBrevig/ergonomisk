@@ -1,61 +1,213 @@
+units:
+  kx: cx
+  ky: cy
+  px: kx + 2
+  py: ky + 2
+  frame_shift_x: 100
+  frame_shift_y: -100
+  micro_x: 33
+  micro_y: 17.8
+  micro_rot: -105
+  micro_shift_x: 63
+  micro_shift_y: 7
+  jack_x: 12.2
+  jack_y: 6.1
+  jack_shift_x: 15
+  jack_shift_y: 6.6
 points:
+  key:
+    footprints:
   zones:
     matrix:
+      anchor:
+        shift: [frame_shift_x, frame_shift_y]
       rows:
         bottom:
+          padding: ky 
+          row_net: P21
         home:
+          padding: ky 
+          row_net: P20
         top:
+          padding: ky
+          row_net: P19
       columns:
         pinky:
+          rows.bottom.key.led_din: bot_ring_dout
+          rows.home.key.led_din: bot_pinky_dout
+          rows.top.key.led_din: top_ring_dout
+
+          rows.bottom.key.led_dout: bot_pinky_dout
+          rows.home.key.led_dout: home_pinky_dout
+          rows.top.key.led_dout: end_of_leds
+
           key:
             splay: 10
+            column_net: P4
         ring:
+          rows.bottom.key.led_din: bot_middle_dout
+          rows.home.key.led_din: home_pinky_dout
+          rows.top.key.led_din: top_middle_dout
+
+          rows.bottom.key.led_dout: bot_ring_dout
+          rows.home.key.led_dout: home_ring_dout
+          rows.top.key.led_dout: top_ring_dout
           key:
             splay: -5
             stagger: 10
+            column_net: P5
         middle:
+          rows.bottom.key.led_din: bot_index_dout
+          rows.home.key.led_din: home_ring_dout
+          rows.top.key.led_din: top_index_dout
+
+          rows.bottom.key.led_dout: bot_middle_dout
+          rows.home.key.led_dout: home_middle_dout
+          rows.top.key.led_dout: top_middle_dout
           key:
             splay: -5
             stagger: 5
+            column_net: P6
         index:
+          rows.bottom.key.led_din: bot_far_dout
+          rows.home.key.led_din: home_middle_dout
+          rows.top.key.led_din: top_far_dout
+
+          rows.bottom.key.led_dout: bot_index_dout
+          rows.home.key.led_dout: home_index_dout
+          rows.top.key.led_dout: top_index_dout
           key:
             splay: -4
             stagger: -5
+            column_net: P7
         far:
+          rows.bottom.key.led_din: thumb_near_dout
+          rows.home.key.led_din: home_index_dout
+          rows.top.key.led_din: top_index_dout
+
+          rows.bottom.key.led_dout: bot_far_dout
+          rows.home.key.led_dout: home_far_dout
+          rows.top.key.led_dout: top_far_dout
           key:
             splay: -1
             stagger: -5
+            column_net: P8
     thumb:
       anchor:
         ref: matrix_far_bottom
-        shift: [0, -1.5U]
+        shift: [0, -1.8ky]
         rotate: -15
+      rows:
+        keys:
+          row_net: P21
       columns:
         inner:
+          rows.keys.key.led_din: thumb_outer_dout
+          rows.keys.key.led_dout: thumb_near_dout
+          key:
+            row_net: P21
+            column_net: P9
         outer:
+          rows.keys.key.led_din: P18
+          rows.keys.key.led_dout: thumb_outer_dout
           key: 
-            spread: 1.1U
+            row_net: P21
+            spread: 1.2kx
+            column_net: P9
     
 outlines:
-  _switches:
+  switches:
     - what: rectangle
       where: true
-      asym: source
-      bound: false
-      size: 14
-  _polygon:
+      size: [13.8,13.8]
+  raw:
     - what: rectangle
       where: true
-      size: [cx + 15, cy + 15]
-      bevel: 6
-  plate: [_polygon, -_switches]
+      bound: true
+      size: [px,py]
+  micro:
+    - what: rectangle
+      size: [micro_x,micro_y]
+      where: 
+        - ref: matrix_middle_bottom
+          shift: [micro_shift_x, micro_shift_y]
+          rotate: micro_rot
+  jack:
+    - what: rectangle
+      size: [jack_x,jack_y]
+      where: 
+        - ref: matrix_middle_bottom
+          shift: [micro_shift_x+jack_shift_x, micro_shift_y+jack_shift_y]
+          rotate: micro_rot
+  polygon:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_far_top
+          shift: [px/2,30]
+        - ref: matrix_pinky_top
+          shift: [-px/2,30]
+        - ref: matrix_pinky_bottom
+          shift: [-px/2,-py/2]
+        - ref: matrix_pinky_bottom
+          shift: [px/2,-py/2]
+        - ref: thumb_inner_keys
+          shift: [-0.5px,-0.5py]
+        - ref: thumb_outer_keys
+          shift: [0.5px,-0.5py]
+        - ref: thumb_outer_keys
+          shift: [0.5px,0.5py]
+  micro_mount:
+    - what: rectangle
+      size: [micro_x+10,micro_y+20]
+      where:
+        - ref: matrix_middle_bottom
+          shift: [60,4]
+          rotate: micro_rot
+  top_arch:
+    - what: circle
+      radius: 90
+      where: 
+        - ref: matrix_middle_home
+          shift: [10, -60]
+  side_arch:
+    - what: circle
+      radius: 90
+      where: 
+        - ref: matrix_far_home
+          shift: [90+12, 10]
+  palm_arch:
+    - what: circle
+      radius: 18
+      where: 
+        - ref: matrix_middle_bottom
+          shift: [0, -40]
+  _outline: [
+    polygon,
+    -palm_arch,
+    ~top_arch,
+    -side_arch,
+    micro_mount ]
+
+  outline:
+    - what: outline
+      name: _outline
+      fillet: 4
+  _plate: [
+    outline,
+    -micro,
+    -switches,
+    -jack ]
+  plate:
+    - what: outline
+      name: _plate
 
 pcbs:
   ergonomisk:
     outlines:
       main:
-        outline: _polygon
-      switch_plate:
+        outline: outline
+      plate:
         outline: plate
         layer: Eco1.User
     footprints:
@@ -63,51 +215,46 @@ pcbs:
         what: choc
         where: true
         params:
-          from: GND
-          to: "{{column_net}}"
           keycaps: true
           reverse: true
           hotswap: false
-      # Swapped for RPi Pico
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      rgbs:
+        what: rgb
+        where: true
+        params:
+          din: "{{key.led_din}}"
+          dout: "{{key.led_dout}}"
+        adjust:
+          shift: [0, -4.7]
+      diode:
+        what: diode
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, 7.5]
       promicro:
         what: promicro
         where:
-          ref: matrix_far_top
-          shift: [1u, -0.5u]
-          rotate: -90
+          ref: matrix_middle_bottom
+          shift: [micro_shift_x, micro_shift_y]
+          rotate: micro_rot
         params:
-          orientation: down
+          orientation: up
       trrs:
         what: trrs
-        where:
-          ref: matrix_far_top
-          shift: [2u, 0.5u]
-          rotate: 0
+        where: 
+          - ref: matrix_middle_bottom
+            shift: [ 3.8+micro_shift_x+jack_shift_x, 5.4 + micro_shift_y+jack_shift_y]
+            rotate: micro_rot+90
         params:
           A: GND
           B: GND
-          C: P1
+          C: P0
           D: VCC
           reverse: true
           symmetric: true
-      reset:
-        what: button
-        where:
-          ref:
-            - matrix_ring_home
-          shift: [-0.7u, 0]
-          rotate: 90
-        params:
-          from: RST
-          to: GND
-      resetbottom:
-        what: button
-        where:
-          ref:
-            - matrix_ring_home
-          shift: [-0.7u, 0]
-          rotate: 90
-        params:
-          from: RST
-          to: GND
-          side: B
+
