@@ -1,3 +1,4 @@
+output/*
 pcb/pcbs/*
 *.000
 *.bak

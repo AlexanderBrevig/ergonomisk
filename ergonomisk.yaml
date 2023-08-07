@@ -221,7 +221,7 @@ pcbs:
           from: "{{column_net}}"
           to: "{{colrow}}"
       rgbs:
-        what: rgb
+        what: sk6812minie 
         where: true
         params:
           din: "{{key.led_din}}"
@@ -244,6 +244,12 @@ pcbs:
           rotate: micro_rot
         params:
           orientation: up
+      tenting_puck:
+        what: tentingpuck
+        adjust: 
+          shift: [ 145.05, -77.35 ]
+        params:
+          net: GND
       trrs:
         what: trrs
         where: 

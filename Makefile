@@ -2,5 +2,6 @@
 .PHONY: build
 
 build:
-	ergogen ergonomisk.yaml -o pcb
-	pcbnew pcb/pcbs/ergonomisk.kicad_pcb &
+	./ergogen/src/cli.js ergonomisk.yaml
+	cp output/pcbs/ergonomisk.kicad_pcb pcb/ergonomisk.kicad_pcb
+	pcbnew pcb/ergonomisk.kicad_pcb &
