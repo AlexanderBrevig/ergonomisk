@@ -1,5 +1,6 @@
 output/*
 pcb/pcbs/*
+pcb/production/*
 *.000
 *.bak
 *.bck
