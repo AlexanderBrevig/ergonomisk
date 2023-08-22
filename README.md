@@ -1,5 +1,7 @@
 # Ergonomisk
 
+My first ergogen experiment.
+
 ```
 ╭───╮ ╭───╮ ╭───╮ ╭───╮ ╭───╮ ╭───╮ ╭───╮ ╭───╮ ╭───╮ ╭───╮  
 │ E │ │ r │ │ g │ │ o │ │ n │ │ o │ │ m │ │ i │ │ s │ │ k │  
@@ -15,12 +17,6 @@
 
 This will generate a stub PCB that I modified to get to the final design.
 
-## TODO
-
-### Library 
-
-- [x] tenting puck
-- [ ] per key SK6812MINI-E
 
 ## REFs
 
